@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title><?= COMPANIE_NAME ?></title>
+    <link rel="stylesheet" type="text/css" href="../styles/main.css">
 </head>
 <body>
 <div id="wrapper">
