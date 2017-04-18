@@ -1,2 +1,2 @@
 <?php
-define('COMPANIE_NAME','e-electronics');
+define('COMPANIE_NAME','Chaussures shop');
