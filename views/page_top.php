@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title><?= COMPANIE_NAME ?></title>
-    <link rel="stylesheet" type="text/css" href="../styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 <div id="wrapper">

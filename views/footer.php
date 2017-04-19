@@ -1,14 +1,26 @@
 <?php
 ?>
 <footer>
-    <div id="contact">
+    <div id="navfooter">
         <ul>
-            <li>Contact-nous</li>
-            <li>Livraison</li>
-            <li>Retours</li>
-            <li>Installations</li>
+            <li><a href="../index.php">Accueil</a></li>
+            <li><a href="../promotions.php">Promotions</a></li>
+            <li><a href="../services.php">Nos articles</a></li>
         </ul>
     </div>
+
+    <div class="contact">
+        <p>contact@chaussureshop.com</p>
+        <p>Tél : 514 000 0000</p>
+
+    </div>
+
+    <div class="contact">
+        <p>255 Boulevard Crémazie Est</p>
+        <p>Montréal</p>
+        <p>QC H2M 1M2</p></div>
+
+
     <div id="reseaux-social">
         <ul>
             <li><a href="http://www.facebook.com"><img src="images/social/facebook.png"></a></li>
