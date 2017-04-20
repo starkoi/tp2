@@ -1,5 +1,5 @@
 <?php
-define('CONN_HOST', '127.0.0.1');
+define('CONN_HOST', '127.0.0.count_panier');
 define('CONN_USER', 'root');
 define('CONN_PWD', '');
 define('DBNAME', 'chaussure_shop');
