@@ -20,7 +20,6 @@
         <p>Montréal</p>
         <p>QC H2M 1M2</p></div>
 
-
     <div id="reseaux-social">
         <ul>
             <li><a href="http://www.facebook.com"><img src="images/social/facebook.png"></a></li>
