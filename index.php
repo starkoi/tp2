@@ -53,8 +53,6 @@ require_once ('views/page_top.php');
     </section>
 
     <!-------------- Fin Carousel -------------->
-
-    </section>
     <h1><?php echo COMPANIE_NAME; ?></h1>
 
     <!-------------- Fin Carousel -------------->
