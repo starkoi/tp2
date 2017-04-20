@@ -51,6 +51,10 @@ require_once ('views/page_top.php');
         <!-- Controles de Navegacion -->
         <ul id="control-buttons" class="control-buttons"></ul>
     </section>
+
+    <!-------------- Fin Carousel -------------->
+
+    </section>
     <h1><?php echo COMPANIE_NAME; ?></h1>
 
     <!-------------- Fin Carousel -------------->

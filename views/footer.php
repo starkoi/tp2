@@ -5,7 +5,7 @@
         <ul>
             <li><a href="../index.php">Accueil</a></li>
             <li><a href="../catalogue.php">Souliers</a></li>
-            <li><a href="../conatct.php">Contact</a></li>
+            <li><a href="../contact.php">Contact</a></li>
         </ul>
     </div>
 

@@ -2,107 +2,109 @@
 
 $(function() {
 //********************************** menu**********************************
-    $('#menu-deroulant li').click(function(){
+    $('#menu-deroulant li').click(function () {
         $(this).children('.sous_menu').toggle();
         //alert($(this).children('.sous_menu').length);
     });
 
-
-
 //********************************** Caroussel**********************************
-    var SliderModule = (function() {
-        var pb = {};
-        pb.el = $('#slider');
-        pb.items = {
-            panels: pb.el.find('.slider-wrapper > li')
-        };
 
-        // Interval slider
-        var SliderInterval,
-            currentSlider = 0,
-            nextSlider = 1,
-            lengthSlider = pb.items.panels.length;
+    $(function () {
+
+        var SliderModule = (function () {
+            var pb = {};
+            pb.el = $('#slider');
+            pb.items = {
+                panels: pb.el.find('.slider-wrapper > li')
+            };
+
+            // Interval slider
+            var SliderInterval,
+                currentSlider = 0,
+                nextSlider = 1,
+                lengthSlider = pb.items.panels.length;
 
 
-        pb.init = function(settings) {
-            this.settings = settings || {duration: 8000};
-            var items = this.items,
-                lengthPanels = items.panels.length,
-                output = '';
+            pb.init = function (settings) {
+                this.settings = settings || {duration: 8000};
+                var items = this.items,
+                    lengthPanels = items.panels.length,
+                    output = '';
 
-            // Boutons
-            for(var i = 0; i < lengthPanels; i++) {
-                if(i == 0) {
-                    output += '<li class="active"></li>';
-                } else {
-                    output += '<li></li>';
+                // Boutons
+                for (var i = 0; i < lengthPanels; i++) {
+                    if (i == 0) {
+                        output += '<li class="active"></li>';
+                    } else {
+                        output += '<li></li>';
+                    }
                 }
-            }
 
-            $('#control-buttons').html(output);
+                $('#control-buttons').html(output);
 
 
-            activateSlider();
+                activateSlider();
 
-            $('#control-buttons').on('click', 'li', function(e) {
-                var $this = $(this);
-                if(!(currentSlider === $this.index())) {
-                    changePanel($this.index());
+                $('#control-buttons').on('click', 'li', function (e) {
+                    var $this = $(this);
+                    if (!(currentSlider === $this.index())) {
+                        changePanel($this.index());
+                    }
+                });
+
+            };
+
+            // Fonction pour activer le slider
+            var activateSlider = function () {
+                SliderInterval = setInterval(pb.startSlider, pb.settings.duration);
+            };
+
+            // Animation
+            pb.startSlider = function () {
+                var items = pb.items,
+                    controls = $('#control-buttons li');
+                // Si derniere image, recommencer
+                if (nextSlider >= lengthSlider) {
+                    nextSlider = 0;
+                    currentSlider = lengthSlider - 1;
                 }
-            });
 
-        };
-
-        // Fonction pour activer le slider
-        var activateSlider = function() {
-            SliderInterval = setInterval(pb.startSlider, pb.settings.duration);
-        };
-
-        // Animation
-        pb.startSlider = function() {
-            var items = pb.items,
-                controls = $('#control-buttons li');
-            // Si derniere image, recommencer
-            if(nextSlider >= lengthSlider) {
-                nextSlider = 0;
-                currentSlider = lengthSlider-1;
-            }
-
-            controls.removeClass('active').eq(nextSlider).addClass('active');
-            items.panels.eq(currentSlider).fadeOut('slow');
-            items.panels.eq(nextSlider).fadeIn('slow');
+                controls.removeClass('active').eq(nextSlider).addClass('active');
+                items.panels.eq(currentSlider).fadeOut('slow');
+                items.panels.eq(nextSlider).fadeIn('slow');
 
 
-            currentSlider = nextSlider;
-            nextSlider += 1;
-        };
+                currentSlider = nextSlider;
+                nextSlider += 1;
+            };
 
 
-        var changePanel = function(id) {
-            clearInterval(SliderInterval);
-            var items = pb.items,
-                controls = $('#control-buttons li');
+            var changePanel = function (id) {
+                clearInterval(SliderInterval);
+                var items = pb.items,
+                    controls = $('#control-buttons li');
 
-            if(id >= lengthSlider) {
-                id = 0;
-            } else if(id < 0) {
-                id = lengthSlider-1;
-            }
+                if (id >= lengthSlider) {
+                    id = 0;
+                } else if (id < 0) {
+                    id = lengthSlider - 1;
+                }
 
-            controls.removeClass('active').eq(id).addClass('active');
-            items.panels.eq(currentSlider).fadeOut('slow');
-            items.panels.eq(id).fadeIn('slow');
+                controls.removeClass('active').eq(id).addClass('active');
+                items.panels.eq(currentSlider).fadeOut('slow');
+                items.panels.eq(id).fadeIn('slow');
 
 
-            currentSlider = id;
-            nextSlider = id+1;
+                currentSlider = id;
+                nextSlider = id + 1;
 
-            activateSlider();
-        };
+                activateSlider();
+            };
 
-        return pb;
-    }());
+            return pb;
+        }());
 
-    SliderModule.init({duration: 4000});
+        SliderModule.init({duration: 4000});
 
+    });
 });
