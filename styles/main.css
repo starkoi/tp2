@@ -123,6 +123,7 @@ main {
     display: inline;
     float: left;
     background-color: #FFF;
+    padding: 20px;
 }
 /*************** FOOTER *****************/
 
@@ -339,6 +340,10 @@ footer a {
     text-decoration: none;
 }
 
+footer a:hover {
+    border-bottom:1px dotted #7a8699;
+}
+
 #reseaux-social {
     float: right;
 
@@ -490,3 +495,34 @@ footer a {
     margin-top: 80px;
 
 }
+
+
+/************ CONEXION ************/
+
+main#conexion form  {
+    width: 80%;
+    margin:20px auto 20px;
+    border:1px solid #dadada;
+    padding: 50px 100px 50px 100px;
+}
+main#conexion div {
+    margin: 10px 0 10px 0; }
+
+main#conexion label {
+width: 25%;
+    display: inline-block;
+}
+
+main#conexion input[type=text], main#conexion input[type=password]  {
+    width: 60%;
+}
+main#conexion input, main#conexion label {
+    padding:5px;}
+
+main#conexion input[type=submit] {
+    display: block;
+    margin: 35px auto 0;
+    padding: 5px;
+    width: 150px;
+}
+

@@ -6,6 +6,6 @@
     <div id="menu-secondaire">
         <div id="count" class="img_header">1</div>
         <div id="panier" class="img_header"></div>
-        <div id="user" class="img_header"></div>
+        <div id="user" class="img_header"><a href="../conexion.php"></a></div>
     </div>
 </header>
