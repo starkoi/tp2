@@ -2,6 +2,9 @@
 $page_title = 'Page accueil';
 require_once ('common/defines.php');
 require_once ('views/page_top.php');
+
+
+
 ?>
 <main>
     <!-------------- Carousel -------------->
@@ -57,4 +60,6 @@ require_once ('views/page_top.php');
 
     <!-------------- Fin Carousel -------------->
 </main>
-<?php require_once ('views/page_bottom.php') ?>
+<?php
+require_once ('views/page_bottom.php');
+?>
