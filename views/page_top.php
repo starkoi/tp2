@@ -1,4 +1,6 @@
 <?php
+require_once('views/code_panier.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
