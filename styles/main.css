@@ -16,7 +16,10 @@ body {
     height: 100%;
 
 }
-
+h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
 #wrapper {
     margin:0 auto;
     background: #e0e0e0;
@@ -43,14 +46,14 @@ header nav {
     display: inline;
     float: left;
 }
-a {
+header a {
     text-decoration: none;
     color: white;
 }
 
 body{
     font-family: sans-serif;
-    background-color: lightcyan;
+    background-color: lightgray;
 
 }
 
@@ -66,7 +69,7 @@ div.img_header {
     display: inline;
     float: left;
 }
-div#logo a {
+div#logo a , div#panier a, div#user a{
     width: 80px;
     height: 100%;
     display: inline;
@@ -322,6 +325,59 @@ ul {
     margin-top: 80px;
 
 }
+/***css du form ***/
+form {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 20px;
+}
+fieldset{
+    width: 100%;
+    display: inline;
+    float: left;
+
+}
+fieldset #all_in_form div{
+    padding: 10px;
+    display: inline;
+    float: left;
+    width: 100%;
+}
+#all_in_form {
+   margin: auto;
+    width: 70%;
+}
+legend {
+    text-align: center;
+    padding: 5px;
+}
+
+.text {
+    width: 20%;
+    float: left;
+}
+.inline label {
+    display: inline;
+}
+.input, select,#comments {
+    width: 80%;
+    display: inline;
+    float: left;
+
+}
+
+#submit {
+    text-align: center;
+
+}
+input[type=submit] {
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+
 /*************** FOOTER *****************/
 
 footer {
