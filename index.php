@@ -2,8 +2,7 @@
 $page_title = 'Page accueil';
 require_once ('common/defines.php');
 require_once ('views/page_top.php');
-
-
+require_once ('DB/connection.php');
 
 ?>
 <main>
