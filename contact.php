@@ -1,6 +1,6 @@
 <?php
 $page_title = 'Page contact';
-require_once ('common/defines.php');
+require_once('common/defines.php');
 
 
 $nom = "";
