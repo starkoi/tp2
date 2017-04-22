@@ -23,9 +23,14 @@ function get_chaussures($where = '') {
     return $result;
 }
 
-function get_chaussures_avec_cats() {
+function get_chaussures_avec_cats($cat = null, $sexe = null) {
     global $mysqli;
-    $query_str = "SELECT ch.*, cat.id `cat_id`,cat.nom `cat_nom` FROM `chaussures` as ch, `categorie` as cat WHERE ch.categorie_id = cat.id "; // Contruction de la requète SQL
+    $query_str =    "SELECT ch.*, cat.id `cat_id`,cat.nom `cat_nom` ".
+                    "FROM `chaussures` as ch, `categorie` as cat ".
+                    "WHERE ".
+                        "ch.categorie_id = cat.id ".
+                        ((!is_null($cat))? "AND ch.categorie_id = ".$cat." " : "").
+                        ((!is_null($sexe))? "AND ch.sexe = ".$sexe : ""); // Contruction de la requète SQL
     $res = $mysqli->query($query_str); // Lancement de la requète
     $result = array(); // Créer un tableau vide pour mettre toutes les data
     if ($res && ($res->num_rows > 0)) { // la requete a marché et il y a des enregistrements
@@ -35,7 +40,7 @@ function get_chaussures_avec_cats() {
             $result[$chaussure_data['id']] = $chaussure_data; // Stocker l'enregistrement dans les data
         }
     }
-
+ // var_dump($result);
     return $result;
 }
 
