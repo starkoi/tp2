@@ -2,11 +2,12 @@
 
 $(function() {
 //********************************** menu**********************************
-    $('#menu-deroulant li').click(function () {
-        $(this).children('.sous_menu').toggle();
+    $('#menu-deroulant li').mouseenter(function() {
+        $(this).children('.sous_menu').fadeIn();
         //alert($(this).children('.sous_menu').length);
+    }).mouseleave(function() {
+        $(this).children('.sous_menu').fadeOut();
     });
-
 //********************************** Caroussel**********************************
 
     $(function () {

@@ -23,14 +23,15 @@ function get_chaussures($where = '') {
     return $result;
 }
 
-function get_chaussures_avec_cats($cat = null, $sexe = null) {
+function get_chaussures_avec_cats($cat = null, $sexe = null, $id_chaussure = null) {
     global $mysqli;
     $query_str =    "SELECT ch.*, cat.id `cat_id`,cat.nom `cat_nom` ".
                     "FROM `chaussures` as ch, `categorie` as cat ".
                     "WHERE ".
                         "ch.categorie_id = cat.id ".
                         ((!is_null($cat))? "AND ch.categorie_id = ".$cat." " : "").
-                        ((!is_null($sexe))? "AND ch.sexe = ".$sexe : ""); // Contruction de la requète SQL
+                        ((!is_null($sexe))? "AND ch.sexe = ".$sexe : "").
+                        ((!is_null($id_chaussure))? "AND ch.id = ".$id_chaussure : ""); // Contruction de la requète SQL
     $res = $mysqli->query($query_str); // Lancement de la requète
     $result = array(); // Créer un tableau vide pour mettre toutes les data
     if ($res && ($res->num_rows > 0)) { // la requete a marché et il y a des enregistrements
@@ -45,7 +46,7 @@ function get_chaussures_avec_cats($cat = null, $sexe = null) {
 }
 
 
-function get_full_image_path ($chaussure_data_param){
+function get_full_image_path($chaussure_data_param){
     $full_image_path= IMG_PATH.($chaussure_data_param["sexe"]?'hommes':'femmes')."/".$chaussure_data_param["cat_nom"]."/".$chaussure_data_param["fichier_img"];
     return $full_image_path;
 
