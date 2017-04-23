@@ -3,7 +3,12 @@ $page_title = 'Page accueil';
 require_once ('common/defines.php');
 require_once ('views/page_top.php');
 require_once ('DB/connection.php');
+$promotion = '';
+if (array_key_exists('promotion',$_GET)&& ($_GET['promotion'] !==null)) {
+    $promotion = $_GET['promotion'];
 
+
+}
 ?>
 <main>
     <!-------------- Carousel -------------->
@@ -56,7 +61,22 @@ require_once ('DB/connection.php');
 
     <!-------------- Fin Carousel -------------->
     <h1><?php echo COMPANIE_NAME; ?></h1>
+    <h2>Produits Vedettes</h2>
 
+<?php
+$chaussures = get_chaussures_promo_avec_cats();
+
+foreach ($chaussures as $id => $c) {
+    $img = '<a href="details.php?promotion=' . $c['promotion'] . '"><img src="' . $c["full_image_path"] . '" alt= "image de chaussure"/></a>';
+
+    echo '<div class="chaussures">' .
+        ucfirst($c["marque"]) . ' ' . ucfirst($c["nom"]) .
+        $img .
+        $c["prix"] . ' ' .
+        "<a href='?op=ajouter&itemid=" . $id . "'>Ajouter</a>" .
+        '</div>';
+}
+    ?>
     <!-------------- Fin Carousel -------------->
 </main>
 <?php
