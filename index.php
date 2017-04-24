@@ -2,7 +2,7 @@
 $page_title = 'Page accueil';
 require_once ('common/defines.php');
 require_once ('views/page_top.php');
-require_once ('DB/connection.php');
+
 $promotion = '';
 if (array_key_exists('promotion',$_GET)&& ($_GET['promotion'] !==null)) {
     $promotion = $_GET['promotion'];
