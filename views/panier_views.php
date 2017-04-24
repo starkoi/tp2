@@ -1,5 +1,12 @@
 <?php
+$total = 0;
 ?>
 <div>
-    <?= count($panier) ?>
+
+    <?php
+    foreach ($panier as $qte) {
+        $total += $qte;
+    }
+    echo $total;
+    ?>
 </div>
