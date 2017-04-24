@@ -9,7 +9,7 @@
         <div><label for="password">Mot de passe : </label><input type="password" name="password" id="password"></div>
         <input type="submit" value="Connexion" name="login"/>
     <?php }else { ?>
-        <span>(<?= $_SESSION['username'] ?>)</span>
+        <span><?= 'Bonjour ' . $_SESSION['username'] . '. Pour vous deconnecter, appuyez sur le bouton ci-dessous. A bientôt !' ?></span>
         <div><input type="submit" value="Déconnexion" name="logout" /></div>
     <?php } ?>
 </form>

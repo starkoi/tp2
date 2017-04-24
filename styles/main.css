@@ -129,15 +129,20 @@ main {
     display: inline;
     float: left;
     background-color: #FFF;
-    padding: 20px;
+
 }
 /************ CONEXION ************/
+
+main#conexion {
+    padding: 20px;
+}
 
 main#conexion form  {
 
     margin:20px 0 20px 0;
     border:1px solid #dadada;
     padding: 50px 100px 50px 100px;
+
 }
 main#conexion div {
     margin: 10px 0 10px 0; }
@@ -159,6 +164,12 @@ main#conexion input[type=submit] {
     padding: 5px;
     width: 150px;
 }
+
+div#username {
+    float: right;
+    font-size: 13px;
+}
+
 
 /******* SLIDER ********/
 

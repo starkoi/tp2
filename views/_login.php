@@ -2,7 +2,7 @@
 
 function user_authenticate($user, $pass) {
     $users = array(
-        'elorri' => 'elo123',
+        'Elorri' => 'elo123',
         'kevin' => 'kev456',
         'sonya' => 'son789',
         'carolina' => 'car123',
