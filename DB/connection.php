@@ -1,8 +1,8 @@
 <?php
 define('CONN_HOST', '127.0.0.1');
-define('CONN_USER', 'root');
-define('CONN_PWD', '');
-define('DBNAME', 'chaussure_shop');
+define('CONN_USER', 'root'); //s
+define('CONN_PWD', ''); // 7e3ytuqev
+define('DBNAME', 'chaussure_shop'); // sbouchar_chaussures-shop
 
 $mysqli = new mysqli(CONN_HOST, CONN_USER, CONN_PWD, DBNAME);
 mysqli_set_charset($mysqli,"utf8");
