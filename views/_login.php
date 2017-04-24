@@ -1,5 +1,4 @@
 <?php
-session_start(); // Activation des sessions
 
 function user_authenticate($user, $pass) {
     $users = array(

@@ -2,6 +2,9 @@
 $page_title = 'Page accueil';
 require_once ('common/defines.php');
 require_once ('views/page_top.php');
+
+
+
 ?>
 <main>
     <!-------------- Carousel -------------->
@@ -32,10 +35,10 @@ require_once ('views/page_top.php');
 
             </li>
         </ul>
-        <!-- Sombras -->
+        <!-- ombre  -->
         <div class="slider-shadow"></div>
 
-        <!-- Controles de Navegacion -->
+        <!-- controle nav slider -->
         <ul id="control-buttons" class="control-buttons"></ul>
     </section>
 
@@ -44,4 +47,6 @@ require_once ('views/page_top.php');
 
 
 </main>
-<?php require_once ('views/page_bottom.php') ?>
+<?php
+require_once ('views/page_bottom.php');
+?>
