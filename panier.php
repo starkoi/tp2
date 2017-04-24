@@ -40,7 +40,7 @@ require_once ('DB/connection.php');
         </table>
         <?php if (count($panier) > 0){
             echo '<input type="submit" name="update" value="Mettre à jour">' .
-            '<input type="button" value="Vider le panier" onclick="document.location=.?op=vider.;">'.
+            '<input type="button" value="Vider le panier" onclick="document.location=\'?op=vider\'">'.
             '<a href="#"">Acheter</a>' ;
         } else {
             echo "<h2>Votre panier est vide!</h2>";
