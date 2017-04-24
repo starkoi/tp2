@@ -1,6 +1,5 @@
 <?php
 if  (array_key_exists('sexe',$_GET) && ($_GET['sexe']==0 ||($_GET['sexe']==1))){
-    require_once('DB/connection.php');
     require_once('common/defines.php');
     require_once('views/page_top.php');
 

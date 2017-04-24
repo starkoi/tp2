@@ -1,7 +1,7 @@
 <?php
 $page_title = 'Page contact';
 require_once('common/defines.php');
-
+require_once ('views/page_top.php');
 
 $nom = "";
 $prenom = "";
@@ -13,7 +13,7 @@ if (isset($_POST['lastname'])) {
     if (strlen(trim($_POST['lastname'])) < 1) {
         $erreur['lastname'] = ' le nom doit avoir minimum 1 caractère. ';
     } else {
-        $nom =  $_POST['lastname'];
+        $nom =  trim($_POST['lastname']);
     }
 }
 
@@ -21,24 +21,23 @@ if (isset($_POST['firstname'])) {
     if (strlen(trim($_POST['firstname'])) < 1) {
         $erreur['firstname'] = 'le prenom doit avoir minimum 1 caractère. ';
     } else {
-        $prenom =  $_POST['firstname'];
+        $prenom =  trim($_POST['firstname']);
     }
 }
 if (isset($_POST['sujet'])) {
     if (strlen(trim($_POST['sujet'])) == "") {
         $erreur['sujet'] = 'Veuillez choisir un sujet. ';
     } else {
-        $sujet =  $_POST['sujet'];
+        $sujet =  trim($_POST['sujet']);
     }
 }
 if (isset($_POST['courriel'])) {
     if (!filter_var($_POST['courriel'], FILTER_VALIDATE_EMAIL)) {
        $erreur['courriel'] = 'Veuillez entrer une adresse de courriel valide';
     } else {
-        $courriel =  $_POST['courriel'];
+        $courriel =  trim($_POST['courriel']);
     }
 }
-require_once ('views/page_top.php');
 ?>
 <main>
     <h1>Contact</h1>

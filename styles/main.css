@@ -130,6 +130,34 @@ main {
     float: left;
     background-color: #FFF;
 }
+/************ CONEXION ************/
+
+main#conexion form  {
+
+    margin:20px 0 20px 0;
+    border:1px solid #dadada;
+    padding: 50px 100px 50px 100px;
+}
+main#conexion div {
+    margin: 10px 0 10px 0; }
+
+main#conexion label {
+width: 25%;
+    display: inline-block;
+}
+
+main#conexion input[type=text], main#conexion input[type=password]  {
+    width: 60%;
+}
+main#conexion input, main#conexion label {
+    padding:5px;}
+
+main#conexion input[type=submit] {
+    display: block;
+    margin: 35px auto 0;
+    padding: 5px;
+    width: 150px;
+}
 
 /******* SLIDER ********/
 

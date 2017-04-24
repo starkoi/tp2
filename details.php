@@ -1,7 +1,7 @@
 <?php
 require_once ('common/defines.php');
 require_once ('views/page_top.php');
-require_once ('DB/connection.php');
+
 if (array_key_exists('produit_id',$_GET)&& ($_GET['produit_id'] !==null)) {
     $produit_id = $_GET['produit_id'];
 

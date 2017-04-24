@@ -52,6 +52,7 @@ if (array_key_exists('op', $_GET)) {
             break;
     }
     header('location:'.$_SERVER['PHP_SELF']. (isset($_GET['sexe'])? "?sexe=".$_GET['sexe']: ""));
+    exit();
 }
 foreach ($_POST as $item_name => $item_count) {
     if (0 === strpos($item_name, 'cart_item_')) {
