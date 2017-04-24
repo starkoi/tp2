@@ -20,10 +20,11 @@ if  (array_key_exists('sexe',$_GET) && ($_GET['sexe']==0 ||($_GET['sexe']==1))){
             $img = '<a href="details.php?produit_id=' . $c['id']. '"><img src="'.$c["full_image_path"].'" alt= "image de chaussure"/></a>';
 
             echo    '<div class="chaussures">'.
-                ucfirst($c["marque"] ). ' ' .ucfirst($c["nom"]) .
+               '<p>'. ucfirst( $c["marque"] ). ' ' .ucfirst($c["nom"]) . '</p>' .
                 $img.
-                $c["prix"]. ' '.
-                "<a href='?op=ajouter&itemid=".$id.((!is_null($sexe))?"&sexe=".$sexe : "")."'>Ajouter</a>".
+                '<p class="prix_chaussure">' . $c["prix"] . '</p>' .
+
+                "<a href='?op=ajouter&itemid=".$id.((!is_null($sexe))?"&sexe=".$sexe : "")."' class='ajouter_panier'>Ajouter</a>".
                 '</div>';
         }
         ?>

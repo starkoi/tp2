@@ -47,8 +47,8 @@ if (array_key_exists('promotion',$_GET)&& ($_GET['promotion'] !==null)) {
     </section>
 
     <!-------------- Fin Carousel -------------->
-    <h1><?php echo COMPANIE_NAME; ?></h1>
-    <h2>Produits Vedettes</h2>
+    <div id="en_vedette">
+    <h2>Nos produits en vedette</h2>
 
 <?php
 $chaussures = get_chaussures_promo_avec_cats();
@@ -58,14 +58,14 @@ foreach ($chaussures as $id => $c) {
 
 
     echo '<div class="chaussures">' .
-        ucfirst($c["marque"]) . ' ' . ucfirst($c["nom"]) .
+        '<p>' . ucfirst($c["marque"]) . ' ' . ucfirst($c["nom"]) . '</p>' .
         $img .
-        $c["prix"] . ' ' .
-        "<a href='?op=ajouter&itemid=" . $id . "'>Ajouter</a>" .
+        '<p class="prix_chaussure">' . $c["prix"] . '</p>' . ' ' .
+        "<a class='ajouter_panier' href='?op=ajouter&itemid=" . $id . "'>Ajouter</a>" .
         '</div>';
 }
     ?>
-
+    </div>
 </main>
 <?php
 require_once ('views/page_bottom.php');

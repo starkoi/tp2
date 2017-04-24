@@ -148,7 +148,7 @@ main#conexion div {
     margin: 10px 0 10px 0; }
 
 main#conexion label {
-width: 25%;
+    width: 25%;
     display: inline-block;
 }
 
@@ -350,17 +350,6 @@ ul {
     margin: 10px;
 
 }
-/*css de la page produits.php*/
-
-#main_produits img {
-    width: 200px;
-}
-.chaussures {
-   width: 50%;
-    display: inline;
-    float: left;
-}
-
 /***css du form ***/
 
 form {
@@ -382,7 +371,7 @@ fieldset #all_in_form div{
     width: 100%;
 }
 #all_in_form {
-   margin: auto;
+    margin: auto;
     width: 70%;
 }
 legend {
@@ -587,4 +576,79 @@ footer a:hover {
     font-weight: 300;
     margin-top: 80px;
 
+}
+
+/*************** PROFUITS ***************/
+
+main#main_produits {
+    padding:20px;
+
+}
+
+div.chaussures img {
+    border: 1px solid #e2dfdf;
+    width: 250px;
+}
+
+#main_produits .chaussures {
+    background: #eae7e7;
+    padding:20px;
+    margin:6px;
+    width:32%;
+    display: inline;
+    float: left;
+}
+
+div.chaussures p:first-child {
+    font-size: 24px;
+    padding-bottom: 5px;
+}
+
+.prix_chaussure {
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.ajouter_panier {
+
+    background: #282c33;
+    padding: 5px 50px 5px 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.ajouter_panier:hover {
+    background-color: #e3365e;
+    transition: 0.5s;
+}
+
+/************** DETAIL PRODUIT ***********************/
+
+main .chaussures {
+    background: #eae7e7;
+    padding:20px;
+    margin:20px;
+}
+
+/**************** PRODUITS VEDETTES ACCUEIL *********************/
+
+#en_vedette .chaussures {
+    background: #eae7e7;
+    padding:20px;
+    margin:6px;
+    width:32%;
+    display: inline;
+    float: left;
+}
+
+#en_vedette {
+    padding:20px;
+}
+
+#en_vedette h2 {
+    padding: 5px;
+    font-size: 40px;
+    text-align: center;
+    background: #eae7e7;
+    margin: 5px 5px 10px 5px
 }
