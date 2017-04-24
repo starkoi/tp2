@@ -110,6 +110,9 @@ div#user {
 div#panier {
     background-image: url("../images/logo/panier.png");
 }
+#panier div{
+    margin-left: 15px;
+}
 .sous_menu {
     display: none;
     float: left;
