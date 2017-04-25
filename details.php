@@ -22,7 +22,7 @@ if (array_key_exists('produit_id', $_GET) && ($_GET['produit_id'] !== null)) {
 
     echo '<div class="chaussures">' .
     '<p>' . ucfirst($chaussure["marque"]) . ' ' . ucfirst($chaussure["nom"]) . '</p>'. $img  . $chaussure["description"] .  '<p class="prix_chaussure">' . $chaussure["prix"] . '</p>' .
-            "<a class='ajouter_panier' href=' ? op = ajouter & itemid = ".$produit_id." & produit_id = ".$produit_id.'&sexe='.$chaussure['sexe'].((!is_null($cat_id))?"&cat_id=".$cat_id : "")."'> Ajouter</a>" .
+            "<a class='ajouter_panier' href='?op=ajouter&itemid=".$produit_id."&produit_id=".$produit_id.'&sexe='.$chaussure['sexe'].((!is_null($cat_id))?"&cat_id=".$cat_id : "")."'> Ajouter</a>" .
             ' </div > ';
         ?>
     </main>
