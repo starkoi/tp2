@@ -29,9 +29,12 @@ if (array_key_exists('op', $_GET)) {
             if ($itemid != '') { // N'ajouter que si l'id est valide
                 if (array_key_exists($itemid, $panier)) { // Si l'item est dans le panier
                     $panier[$itemid]++;
+
                 } else {
                     $panier[$itemid] = 1;
                 }
+                header('location: produits.php' . (isset($_GET['sexe'])? "?sexe=".$_GET['sexe']: "").(isset($_GET['cat_id'])? "&cat_id=".$_GET['cat_id']: ""));
+                exit();
             }
             break;
         case 'retirer':
@@ -51,10 +54,7 @@ if (array_key_exists('op', $_GET)) {
             $panier = array(); // Remplacer le panier par un tableau vide
             break;
     }
-    $url_redirect = 'location: produits.php?'. (isset($_GET['sexe'])? "sexe=".$_GET['sexe']: "").(isset($_GET['cat_id'])? "&cat_id=".$_GET['cat_id']: "");
 
-    header($url_redirect);
-    exit();
 }
 foreach ($_POST as $item_name => $item_count) {
     if (0 === strpos($item_name, 'cart_item_')) {

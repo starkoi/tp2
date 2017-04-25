@@ -1,20 +1,12 @@
 <?php
 require_once('common/defines.php');
+require_once('views/page_top.php');
+$sexe= (isset($_GET['sexe']) && ($_GET['sexe']==0 ||($_GET['sexe']==1)))? $_GET['sexe']: null;
+$cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
+$produit_id = (isset($_GET['produit_id'])? $_GET['produit_id']: null);
 
-
-if (array_key_exists('produit_id', $_GET) && ($_GET['produit_id'] !== null)) {
-    require_once('views/page_top.php');
-    $cat_id = null;
-    $produit_id = $_GET['produit_id'];
-
-    if  (array_key_exists('cat_id',$_GET) && categorie_exists($_GET['cat_id'])) {
-        $cat_id = $_GET['cat_id'];
-    }
-
-    $chaussures = get_chaussures_avec_cats(null, null, $produit_id);
-    $chaussure = $chaussures[$produit_id];
-
-
+$chaussures = get_chaussures_avec_cats(null,null,$produit_id);
+$chaussure = $chaussures[$produit_id];
     ?>
     <main id="detail">
     <?php
@@ -27,12 +19,4 @@ if (array_key_exists('produit_id', $_GET) && ($_GET['produit_id'] !== null)) {
         ?>
     </main>
     <?php require_once ('views/page_bottom.php') ?>
-
-<?php
-}else {
-    header('Location:index.php');
-}
-
-?>
-
 

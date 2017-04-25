@@ -1,16 +1,10 @@
 <?php
-if  (array_key_exists('sexe',$_GET) && ($_GET['sexe']==0 ||($_GET['sexe']==1))){
     require_once('common/defines.php');
     require_once('views/page_top.php');
+$sexe= (isset($_GET['sexe']) && ($_GET['sexe']==0 ||($_GET['sexe']==1)))? $_GET['sexe']: null;
+$cat_id = (isset($_GET['cat_id'])? $_GET['cat_id']: null);
+$chaussures = get_chaussures_avec_cats($cat_id, $sexe);
 
-    $sexe = $_GET['sexe'];
-    $cat_id = null;
-
-    if  (array_key_exists('cat_id',$_GET) && categorie_exists($_GET['cat_id'])) {
-        $cat_id = $_GET['cat_id'];
-    }
-
-    $chaussures = get_chaussures_avec_cats($cat_id, $sexe);
 
     ?>
 
@@ -31,8 +25,3 @@ if  (array_key_exists('sexe',$_GET) && ($_GET['sexe']==0 ||($_GET['sexe']==1))){
         ?>
     </main>
     <?php require_once('views/page_bottom.php') ?>
-    <?php
-}else {
-   header('Location: index.php');
-}
-?>
