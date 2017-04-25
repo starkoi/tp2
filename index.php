@@ -54,14 +54,14 @@ if (array_key_exists('promotion',$_GET)&& ($_GET['promotion'] !==null)) {
 $chaussures = get_chaussures_promo_avec_cats();
 
 foreach ($chaussures as $id => $c) {
-    $img = '<a href="details.php?promotion=' . $c['promotion'] . '"><img src="' . $c["full_image_path"] . '" alt= "image de chaussure"/></a>';
+    $img = '<img src="' . $c["full_image_path"] . '" alt= "image de chaussure"/>';
 
 
     echo '<div class="chaussures">' .
+        '<a href="details.php?produit_id=' . $id . '">Details</a>'.
         '<p>' . ucfirst($c["marque"]) . ' ' . ucfirst($c["nom"]) . '</p>' .
         $img .
-        '<p class="prix_chaussure">' . $c["prix"] . '</p>' . ' ' .
-        "<a class='ajouter_panier' href='?op=ajouter&itemid=" . $id . "'>Ajouter</a>" .
+        '<p class="prix_chaussure">' . $c["prix"] . '</p>' .
         '</div>';
 }
     ?>
