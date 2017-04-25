@@ -51,7 +51,9 @@ if (array_key_exists('op', $_GET)) {
             $panier = array(); // Remplacer le panier par un tableau vide
             break;
     }
-    header('location:'.$_SERVER['PHP_SELF']. (isset($_GET['sexe'])? "?sexe=".$_GET['sexe']: ""));
+    $url_redirect = 'location: produits.php?'. (isset($_GET['sexe'])? "sexe=".$_GET['sexe']: "").(isset($_GET['cat_id'])? "&cat_id=".$_GET['cat_id']: "");
+
+    header($url_redirect);
     exit();
 }
 foreach ($_POST as $item_name => $item_count) {
