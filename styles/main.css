@@ -16,19 +16,22 @@ body {
     height: 100%;
 
 }
+
 h1 {
     margin-left: 20px;
     margin-top: 20px;
 }
+
 #wrapper {
-    margin:0 auto;
+    margin: 0 auto;
     background: #e0e0e0;
     width: 1024px;
     box-shadow: 0 0 10px #000;
 }
+
 /* css du header */
 
-header{
+header {
     background-color: #282c33;
     width: 100%;
     height: 75px;
@@ -39,27 +42,30 @@ header{
     display: inline;
     float: left;
 }
+
 header nav {
     width: 500px;
     height: 100%;
     display: inline;
     float: left;
 }
+
 header a {
     text-decoration: none;
     color: white;
 }
 
-body{
+body {
     font-family: sans-serif;
     background-color: lightgray;
 
 }
 
 div#wrapper {
-    margin:0 auto;
+    margin: 0 auto;
     width: 1024px;
 }
+
 div.img_header {
     width: 80px;
     height: 100%;
@@ -68,26 +74,31 @@ div.img_header {
     display: inline;
     float: left;
 }
-div#logo a , div#panier a, div#user a{
+
+div#logo a, div#panier a, div#user a {
     width: 80px;
     height: 100%;
     display: inline;
     float: left;
 }
+
 div#logo {
     background-image: url("../images/logo/logo.png");
 }
+
 #menu-deroulant {
     width: 100%;
     height: 100%;
     display: inline;
     float: left;
 }
+
 #menu-deroulant li a:hover {
     text-decoration: underline;
     color: #e3365e;
 }
-#menu-deroulant li{
+
+#menu-deroulant li {
     cursor: pointer;
     display: inline;
     float: left;
@@ -95,24 +106,30 @@ div#logo {
     height: 100%;
 
 }
+
 div#menu-secondaire {
     width: 444px;
     height: 100%;
     display: inline;
     float: left;
 }
+
 div#menu-secondaire .img_header {
     float: right;
 }
+
 div#user {
     background-image: url("../images/logo/user.png");
 }
+
 div#panier {
     background-image: url("../images/logo/panier.png");
 }
-#panier div{
+
+#panier div {
     margin-left: 15px;
 }
+
 .sous_menu {
     display: none;
     float: left;
@@ -121,9 +138,11 @@ div#panier {
     position: relative;
     opacity: 0.9;
 }
+
 .sous_menu li {
     width: 100% !important;
 }
+
 main {
     width: 100%;
     display: inline;
@@ -131,32 +150,37 @@ main {
     background-color: #FFF;
 
 }
+
 /************ CONEXION ************/
 
 main#conexion {
     padding: 20px;
 }
 
-main#conexion form  {
+main#conexion form {
 
-    margin:20px 0 20px 0;
-    border:1px solid #dadada;
+    margin: 20px 0 20px 0;
+    border: 1px solid #dadada;
     padding: 50px 100px 50px 100px;
 
 }
+
 main#conexion div {
-    margin: 10px 0 10px 0; }
+    margin: 10px 0 10px 0;
+}
 
 main#conexion label {
     width: 25%;
     display: inline-block;
 }
 
-main#conexion input[type=text], main#conexion input[type=password]  {
+main#conexion input[type=text], main#conexion input[type=password] {
     width: 60%;
 }
+
 main#conexion input, main#conexion label {
-    padding:5px;}
+    padding: 5px;
+}
 
 main#conexion input[type=submit] {
     display: block;
@@ -170,6 +194,12 @@ div#username {
     font-size: 13px;
 }
 
+.error_login {
+    color: red;
+    position: absolute;
+    top: 310px;
+    left: 560px;
+}
 
 /******* SLIDER ********/
 
@@ -210,7 +240,7 @@ ul {
     height: 360px;
     background: #FFF;
     border-top: 3px solid #e3365e;
-    border-bottom:3px solid #e3365e; ;
+    border-bottom: 3px solid #e3365e;;
     overflow: hidden;
 }
 
@@ -267,7 +297,7 @@ ul {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0, 0, 0, 0.65);
     width: 100%;
     padding: 10px;
     color: #FFF;
@@ -321,27 +351,33 @@ ul {
     margin-top: 80px;
 
 }
+
 /**css de la page panier.php**/
 
 #main_panier img {
     width: 30%;
 }
+
 #main_panier tr:nth-child(odd) {
     background-color: #F1F1F1;
 }
+
 #main_panier td.img_container {
     width: 30%;
     text-align: center;
 }
+
 #main_panier .btn_retirer {
     text-decoration: none;
     font-weight: bold;
     color: red;
 }
+
 #main_panier input[type=number] {
     width: 50px;
 
 }
+
 #main_panier input[type=submit], input[type=button] {
     text-align: center;
     display: inline;
@@ -350,6 +386,24 @@ ul {
     margin: 10px;
 
 }
+.bouton_acheter {
+    background: #282c33;
+    padding: 10px 50px 10px 50px;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+    width: 200px;
+    text-align: center;
+}
+
+.bouton_acheter:hover {
+    background-color: #e3365e;
+    transition: 0.5s;
+}
+
+
+
 /***css du form ***/
 
 form {
@@ -358,22 +412,26 @@ form {
     width: 100%;
     padding: 20px;
 }
-fieldset{
+
+fieldset {
     width: 100%;
     display: inline;
     float: left;
 
 }
-fieldset #all_in_form div{
+
+fieldset #all_in_form div {
     padding: 10px;
     display: inline;
     float: left;
     width: 100%;
 }
+
 #all_in_form {
     margin: auto;
     width: 70%;
 }
+
 legend {
     text-align: center;
     padding: 5px;
@@ -383,10 +441,12 @@ legend {
     width: 20%;
     float: left;
 }
+
 .inline label {
     display: inline;
 }
-.input, select,#comments {
+
+.input, select, #comments {
     width: 80%;
     display: inline;
     float: left;
@@ -397,21 +457,21 @@ legend {
     text-align: center;
 
 }
+
 fieldset input[type=submit] {
     padding: 10px;
     margin: 10px;
     text-align: center;
 }
 
-
 /*************** FOOTER *****************/
 
 footer {
     font-size: 1rem;
-    background-color:#282c33;
+    background-color: #282c33;
     width: 100%;
 
-    padding:50px 70px 20px 70px;
+    padding: 50px 70px 20px 70px;
     color: lightgray;
     display: inline;
     float: left;
@@ -423,7 +483,7 @@ footer a {
 }
 
 footer a:hover {
-    border-bottom:1px dotted #7a8699;
+    border-bottom: 1px dotted #7a8699;
 }
 
 #reseaux-social {
@@ -433,16 +493,16 @@ footer a:hover {
 
 #navfooter {
     float: left;
-    border-right:1px solid grey;
-    padding-right:50px;
-    margin-right:30px;
+    border-right: 1px solid grey;
+    padding-right: 50px;
+    margin-right: 30px;
 }
 
 .contact {
     float: left;
-    border-right:1px solid grey;
-    padding-right:30px;
-    margin-right:30px;
+    border-right: 1px solid grey;
+    padding-right: 30px;
+    margin-right: 30px;
 }
 
 #reseaux-social ul {
@@ -452,21 +512,24 @@ footer a:hover {
 #reseaux-social ul li {
     padding: 5px;
 }
+
 #reseaux-social ul li img {
     width: 35px;
 }
+
 .container {
     width: 100%;
     margin: 40px auto 0;
 }
+
 .slider-wrapper {
     z-index: 500;
     position: relative;
     width: 100%;
     height: 360px;
     background: #FFF;
-    border-top: 3px solid #962020;
-    border-bottom:3px solid #962020; ;
+    border-top: 3px solid #e2365d;
+    border-bottom: 3px solid #e2365d;;
     overflow: hidden;
 }
 
@@ -523,7 +586,7 @@ footer a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0, 0, 0, 0.65);
     width: 100%;
     padding: 10px;
     color: #FFF;
@@ -554,7 +617,7 @@ footer a:hover {
 .control-buttons li {
     cursor: pointer;
     display: inline-block;
-    background: #962020;
+    background: #e2365d;
     text-indent: -99999px;
     height: 12px;
     width: 12px;
@@ -581,7 +644,7 @@ footer a:hover {
 /*************** PROFUITS ***************/
 
 main#main_produits {
-    padding:20px;
+    padding: 20px;
 
 }
 
@@ -592,9 +655,9 @@ div.chaussures img {
 
 #main_produits .chaussures {
     background: #eae7e7;
-    padding:20px;
-    margin:6px;
-    width:32%;
+    padding: 20px;
+    margin: 6px;
+    width: 32%;
     display: inline;
     float: left;
 }
@@ -615,6 +678,7 @@ div.chaussures p:first-child {
     padding: 5px 50px 5px 50px;
     color: white;
     text-decoration: none;
+    margin-right:10px;
 }
 
 .ajouter_panier:hover {
@@ -626,23 +690,23 @@ div.chaussures p:first-child {
 
 main .chaussures {
     background: #eae7e7;
-    padding:20px;
-    margin:20px;
+    padding: 20px;
+    margin: 20px;
 }
 
 /**************** PRODUITS VEDETTES ACCUEIL *********************/
 
 #en_vedette .chaussures {
     background: #eae7e7;
-    padding:20px;
-    margin:6px;
-    width:32%;
+    padding: 20px;
+    margin: 6px;
+    width: 32%;
     display: inline;
     float: left;
 }
 
 #en_vedette {
-    padding:20px;
+    padding: 20px;
 }
 
 #en_vedette h2 {
@@ -651,4 +715,16 @@ main .chaussures {
     text-align: center;
     background: #eae7e7;
     margin: 5px 5px 10px 5px
+}
+
+.detail_chaussure {
+    background: #808286;
+    padding: 5px 20px 5px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.detail_chaussure:hover {
+    background-color: #e3365e;
+    transition: 0.5s;
 }

@@ -58,10 +58,10 @@ foreach ($chaussures as $id => $c) {
 
 
     echo '<div class="chaussures">' .
-        '<a href="details.php?produit_id=' . $id . '">Details</a>'.
+
         '<p>' . ucfirst($c["marque"]) . ' ' . ucfirst($c["nom"]) . '</p>' .
         $img .
-        '<p class="prix_chaussure">' . $c["prix"] . '</p>' .
+        '<p class="prix_chaussure">' . $c["prix"] . '</p>' . '<a href="details.php?produit_id=' . $id . '" class="detail_chaussure">Details</a>' .
         '</div>';
 }
     ?>
