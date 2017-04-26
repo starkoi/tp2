@@ -51,7 +51,6 @@ function get_chaussures_promo_avec_cats() {
         "WHERE ".
         "ch.categorie_id = cat.id ".
         "AND ch.promotion = 1";
-
     $res = $mysqli->query($query_str); // Lancement de la requète
     $result = array(); // Créer un tableau vide pour mettre toutes les data
     if ($res && ($res->num_rows > 0)) { // la requete a marché et il y a des enregistrements
