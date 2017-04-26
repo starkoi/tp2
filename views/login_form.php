@@ -1,6 +1,6 @@
 <?php require_once ('_login.php') ?>
 
-<h1>Page de conexion</h1>
+<h1>Page de connexion</h1>
 
 <form method="post">
 
