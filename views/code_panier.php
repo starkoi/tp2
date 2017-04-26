@@ -33,7 +33,14 @@ if (array_key_exists('op', $_GET)) {
                 } else {
                     $panier[$itemid] = 1;
                 }
-                header('location: produits.php' . (isset($_GET['sexe'])? "?sexe=".$_GET['sexe']: "").(isset($_GET['cat_id'])? "&cat_id=".$_GET['cat_id']: ""));
+
+                header(
+                    'location: '.(isset($_GET['promo'])
+                        ?"index.php"
+                        :'produits.php'.
+                            (isset($_GET['sexe'])? "?sexe=".$_GET['sexe']: "").
+                            (isset($_GET['cat_id'])? "&cat_id=".$_GET['cat_id']: ""))
+                );
                 exit();
             }
             break;
