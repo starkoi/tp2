@@ -33,6 +33,8 @@ if (array_key_exists('login', $_POST)
         && user_authenticate($username, $password)) { // Validation sommaire puis authentification
         // Utilisateur est authentifié
         $_SESSION['username'] = $username;
+    } else{
+        echo '<p class="error_login">' . "Mot de passe ou nom d'utilisateur invalide" . '</p>';
     }
 } else if (user_is_logged() && array_key_exists('logout', $_POST)){ // Demande de déconnexion
     unset($_SESSION['username']); // Supprimer l'élément à la clef 'username' dans la session

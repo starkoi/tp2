@@ -21,9 +21,12 @@
             "&sexe=".$sexe.
             ((!is_null($cat_id))?"&cat_id=".$cat_id : "").
             "' class='ajouter_panier'>Ajouter</a>".
-            '<a class="detail_chaussure" href="details.php?produit_id=' . $c['id'].((!is_null($cat_id))?"&cat_id=".$cat_id : ""). '">Détails</a>'.
+            '<a class="detail_chaussure" href="details.php?produit_id=' .
+             $c['id'].((!is_null($cat_id))?"&cat_id=".$cat_id : ""). '">Détails</a>'.
             '</div>';
     }
     ?>
 </main>
 <?php require_once('views/page_bottom.php') ?>
+
+
