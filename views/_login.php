@@ -37,6 +37,7 @@ if (array_key_exists('login', $_POST)
         echo '<p class="error_login">' . "Mot de passe ou nom d'utilisateur invalide" . '</p>';
     }
 } else if (user_is_logged() && array_key_exists('logout', $_POST)){ // Demande de déconnexion
-    unset($_SESSION['username']); // Supprimer l'élément à la clef 'username' dans la session
+    unset($_SESSION['username']);
+    unset($_SESSION['panier']); // Supprimer l'élément à la clef 'username' dans la session
 }
 
