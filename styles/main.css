@@ -163,6 +163,7 @@ main#conexion form {
     border: 1px solid #dadada;
     padding: 50px 100px 50px 100px;
 
+
 }
 
 main#conexion div {
@@ -196,9 +197,8 @@ div#username {
 
 .error_login {
     color: red;
-    position: absolute;
-    top: 310px;
-    left: 560px;
+    margin-left: 195px;
+
 }
 
 /******* SLIDER ********/
