@@ -41,7 +41,9 @@ require_once ('views/page_top.php');
         <?php if (count($panier) > 0){
             echo '<input type="submit" name="update" value="Mettre à jour">' .
             '<input type="button" value="Vider le panier" onclick="document.location=\'?op=vider\'">'.
-            '<a href="#" class="bouton_acheter">Acheter</a>' ;
+                ((user_is_logged())
+                    ? '<a href="#" class="bouton_acheter" onclick="alert(\'Votre commande est en traitement\')">Acheter</a>'
+                    : '<a href="#" class="bouton_acheter" onclick="alert(\'Veuillez vous connecter.\')">Acheter</a>');
         } else {
             echo "<h2>Votre panier est vide!</h2>";
         }

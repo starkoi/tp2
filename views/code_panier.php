@@ -4,6 +4,7 @@
 if ( session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+require_once ('_login.php');
 // Est-ce que j'ai une variable de session nommée 'panier' ?
 // Non ? On la créée (initialisation à tableau vide)
 if (!array_key_exists('panier', $_SESSION)) {
@@ -11,10 +12,6 @@ if (!array_key_exists('panier', $_SESSION)) {
 }
 // Ici $_SESSION['panier'] existe TOUJOURS
 $panier =& $_SESSION['panier']; // $panier est une référence (alias) sur $_SESSION['panier']
-
-// Est-ce que j'ai une operation de panier en données GET ?
-// Oui ? La réaliser
-
 
 
 if (array_key_exists('op', $_GET)) {
@@ -33,7 +30,14 @@ if (array_key_exists('op', $_GET)) {
                 } else {
                     $panier[$itemid] = 1;
                 }
-                header('location: produits.php' . (isset($_GET['sexe'])? "?sexe=".$_GET['sexe']: "").(isset($_GET['cat_id'])? "&cat_id=".$_GET['cat_id']: ""));
+
+                header(
+                    'location: '.(isset($_GET['promo'])
+                        ?"index.php"
+                        :'produits.php'.
+                            (isset($_GET['sexe'])? "?sexe=".$_GET['sexe']: "").
+                            (isset($_GET['cat_id'])? "&cat_id=".$_GET['cat_id']: ""))
+                );
                 exit();
             }
             break;

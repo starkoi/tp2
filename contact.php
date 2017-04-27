@@ -1,5 +1,4 @@
 <?php
-$page_title = 'Page contact';
 require_once('common/defines.php');
 require_once ('views/page_top.php');
 
@@ -37,6 +36,10 @@ if (isset($_POST['courriel'])) {
     } else {
         $courriel =  trim($_POST['courriel']);
     }
+}
+if (isset($_POST['lastname']) && isset($_POST['firstname']) && isset($_POST['sujet']) &&  isset($_POST['courriel']) && ($erreur == "")) {
+    header('Location:index.php?msg_confirmation');
+    exit();
 }
 ?>
 <main>
@@ -76,8 +79,8 @@ if (isset($_POST['courriel'])) {
                     <label for="inscription">Je veux recevoir des nouvelles de "Chaussure-Shop".</label>
                 </div>
                 <div class="inline autre">
-                    <input type="checkbox" name="check" id="legal" />
-                    <label for="legal">J'accepte les conditions d'utilisations.</label>
+                    <input type="checkbox" name="check" id="copie" />
+                    <label for="copie">Envoyer une copie du message à mon courriel.</label>
                 </div>
                 <div>
                     <label for="courriel" class="text" class="input">Courriel (*)</label>
