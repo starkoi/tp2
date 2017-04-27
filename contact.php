@@ -18,7 +18,7 @@ if (isset($_POST['lastname'])) {
 
 if (isset($_POST['firstname'])) {
     if (strlen(trim($_POST['firstname'])) < 1) {
-        $erreur['firstname'] = 'le prenom doit avoir minimum 1 caractère. ';
+        $erreur['firstname'] = 'le prénom doit avoir minimum 1 caractère. ';
     } else {
         $prenom =  trim($_POST['firstname']);
     }
@@ -32,7 +32,7 @@ if (isset($_POST['sujet'])) {
 }
 if (isset($_POST['courriel'])) {
     if (!filter_var($_POST['courriel'], FILTER_VALIDATE_EMAIL)) {
-       $erreur['courriel'] = 'Veuillez entrer une adresse de courriel valide';
+       $erreur['courriel'] = 'Veuillez entrer une adresse de courriel valide.';
     } else {
         $courriel =  trim($_POST['courriel']);
     }

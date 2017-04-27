@@ -196,9 +196,7 @@ div#username {
 
 .error_login {
     color: red;
-    position: absolute;
-    top: 310px;
-    left: 560px;
+    margin-left: 195px;
 }
 
 /******* SLIDER ********/

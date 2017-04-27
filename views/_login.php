@@ -19,6 +19,7 @@ function user_is_logged() {
     return array_key_exists('username', $_SESSION) && ( ! empty($_SESSION['username']));
 }
 
+$message_erreur = '';
 
 //var_dump($_POST);
 $username = '';
@@ -34,10 +35,10 @@ if (array_key_exists('login', $_POST)
         // Utilisateur est authentifié
         $_SESSION['username'] = $username;
     } else{
-        echo '<p class="error_login">' . "Mot de passe ou nom d'utilisateur invalide" . '</p>';
+        $message_erreur = "<p class='error_login'>Mot de passe ou nom d'utilisateur invalide</p>";
     }
 } else if (user_is_logged() && array_key_exists('logout', $_POST)){ // Demande de déconnexion
-    unset($_SESSION['username']);
-    unset($_SESSION['panier']); // Supprimer l'élément à la clef 'username' dans la session
+    unset($_SESSION['username']); // Supprimer l'élément à la clef 'username' dans la session
+    unset($_SESSION['panier']); //vide le panier au logout
 }
 
