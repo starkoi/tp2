@@ -8,7 +8,7 @@
 
 ?>
 <main id="main_produits">
-    <h1><?= ucfirst($chaussure_temp['cat_nom']) . " pour ". (($chaussure_temp['sexe'] == 1)? 'Homme': 'Femme'); ?></h1>
+    <h1><?= (isset($_GET['cat_id'])? ucfirst($chaussure_temp['cat_nom']): null) . " Pour " . (($chaussure_temp['sexe'] == 1)? ' Homme': ' Femme'); ?></h1>
     <?php
     foreach ($chaussures as $id => $c){
         $img = '<img src="'.$c["full_image_path"].'" alt= "image de chaussure"/>';
